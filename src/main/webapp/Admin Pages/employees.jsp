@@ -101,7 +101,7 @@ try {
 			   
 			   <form action="<%= request.getContextPath() %>/delete_emp" method="post">
 			   	 <input type="hidden" name="emp_id" value="<%= emp_id%>">
-			     <input type ="submit" value="Delete" >				<%-- <button id=<%= emp_id %>>delete</button> --%>
+			     <input type ="submit" value="Delete Employee" >				<%-- <button id=<%= emp_id %>>delete</button> --%>
 			   </form>
 			   
 			   </td>	<!-- add form tag for delete -->
