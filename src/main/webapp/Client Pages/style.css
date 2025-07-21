@@ -1,0 +1,142 @@
+/* HEADER //////////////////////////////////////////////// */
+
+
+header{
+	background:linear-gradient(to right,#10707f,#167e8c);
+	box-shadow: 0 -2px 5px rgba(0,0,0,0.8);
+	color:white;
+	padding : 20px;
+	width:100%;
+	border-radius:10px;
+	box-sizing: border-box;
+	position:relative;
+		 
+}
+
+nav{
+	text-align: right;
+	margin-right: 40px;
+	font-weight: bold;
+	position: absolute;
+	top: 35px;
+	right: 80px;
+}
+
+a{
+	color:white;
+	display: inline-block;
+	padding: 9px;
+	border-radius: 10px;
+	text-decoration: none;
+	margin-right: 20px;
+	font-family: Arial, sans-serif;
+}
+
+
+a:hover,a:focus,
+a:active{
+	color:white;/* #8fd8d6; */
+	 /* text-decoration: underline; */
+	 transition: all 0.4s ease;
+	 background-color:#8fd8d6;
+	 
+	 
+}
+
+
+
+
+
+
+			/* /////////////////////////////	Header  //////////////////////////////// */
+
+  body{
+  
+  margin: 0;
+	padding: 0;
+	
+	
+	
+  }
+  
+  
+
+		/* FOOTER 	///////////////////////////////////////////// */
+footer{
+	background:linear-gradient(to right, #015871, #39c0b8);/* linear-gradient(to right,#10707f,#022f3f); */
+	box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+	padding:15px;
+	width:100%;
+	box-sizing:border-box;
+	border-radius:10px;
+	color:black;
+	text-align:center;
+	line-height: 15px;
+	margin:0;
+	bottom:0;
+	margin-bottom: 0px;
+	margin-top:360px;
+    z-index: 10;
+    position:fixed;
+}
+
+		/* ///////////////////////////////// Footer////////////////////// */
+		
+		
+#card1,#card2,#card3 {
+	
+	 		background-color: #fff;
+            
+            
+            border-top-left-radius: 25px;
+            border-top-right-radius: 65px;
+            border-bottom-left-radius: 65px;
+            border-bottom-right-radius: 25px;
+            
+            
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height:150px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            padding:40px;
+            gap:20px;
+            font-weight: 900;  
+            font-size:1.8em;
+}
+
+.cards{
+	gap:70px;
+	padding:40px;
+	display: flex;
+	justify-content: center;
+	
+	text-align: center;
+}
+
+ 
+
+.cards>div:hover {
+	transform: translateY(-5px);
+	cursor: pointer;
+}
+
+#card1 {
+	 background-color: #f4a6a0; 
+	 backdrop-filter: blur(10px);
+	 border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#card2 {
+	background:#8fd8d6;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#card3 {
+	
+	background-color: #bbaae2;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
