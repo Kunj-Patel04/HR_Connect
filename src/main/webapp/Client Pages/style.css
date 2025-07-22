@@ -33,16 +33,40 @@ a{
 }
 
 
-a:hover,a:focus,
-a:active{
+a:hover{
 	color:white;/* #8fd8d6; */
 	 /* text-decoration: underline; */
 	 transition: all 0.4s ease;
-	 background-color:#8fd8d6;
-	 
-	 
+	 background-color:#8fd8d6;	 
 }
 
+#login{
+	color:white;
+	background-color:#007bff;
+}
+
+#login:hover{
+	color:white;
+	background-color:blue;
+}
+
+#logout{
+	background-color:#6c757d;
+    color:white;						
+}
+#logout:hover{
+	background-color:#c82333;
+	color:white;
+}
+
+nav {
+	text-align: right;
+	margin-right: 40px;
+	font-weight: bold;
+	position: absolute;
+	top: 35px;
+	right: 80px;
+}
 
 
 

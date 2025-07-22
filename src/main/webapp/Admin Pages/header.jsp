@@ -58,6 +58,12 @@
 
 <div id="title">
      <h1 style="color:#33FF99">HR Connect </h1>
+     <center><h2 style="
+			  font-family: Arial, Helvetica, sans-serif;
+			  color:#33FF99;
+			  text-decoration:underline;">
+			  Admin Dashboard
+			</h2></center>
       
 </div>
 

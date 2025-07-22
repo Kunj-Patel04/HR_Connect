@@ -17,6 +17,9 @@
 		<a href="index.jsp">Home</a>
 		<a href="MyAttendance.jsp">My Attendance</a>
 		<a href="ContactUs.jsp">Contact us</a>
+		
+		<a id="login" href="#">Login</a>
+		<a id="logout" href="#">Logout</a>
 </nav>
 
 
