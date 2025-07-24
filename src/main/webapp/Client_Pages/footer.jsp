@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/Client_Pages/style.css">
 
 </head>
 <body>

@@ -61,12 +61,8 @@ public class Login extends HttpServlet {
 				session.setAttribute("date",LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
 				
 				RequestDispatcher d = req.getRequestDispatcher("/Admin Pages/index.jsp");
-				/*
-				 * RequestDispatcher de =
-				 * req.getRequestDispatcher("/Admin Pages/employees.jsp");
-				 */
-		    	d.forward(req, resp);
-				/* de.forward(req, resp); */
+				d.forward(req, resp);
+				
 		    	
 		    	System.out.println("✅ User found in database!");
 			}
