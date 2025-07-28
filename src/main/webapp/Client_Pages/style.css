@@ -95,7 +95,7 @@ nav {
 footer{
 	background:linear-gradient(to right, #015871, #39c0b8);/* linear-gradient(to right,#10707f,#022f3f); */
 	box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
-	padding:15px;
+	padding:25px;
 	width:100%;
 	box-sizing:border-box;
 	border-radius:10px;
@@ -105,9 +105,10 @@ footer{
 	margin:0;
 	bottom:0;
 	margin-bottom: 0px;
-	margin-top:360px;
-    z-index: 10;
-    position:fixed;
+	margin-top:65px;
+	
+    
+    
 }
 
 		/* ///////////////////////////////// Footer////////////////////// */
@@ -143,6 +144,7 @@ footer{
 	justify-content: center;
 	
 	text-align: center;
+	
 }
 
  

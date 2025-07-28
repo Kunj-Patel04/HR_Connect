@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f6f9;
-      padding: 0px;
+      /* padding: 0px; */
     }
 
     h2 {
@@ -18,14 +18,15 @@
 
     table {
       width: 90%;
-      margin: 100px auto;
+      margin: 100px auto 160px auto;
       border-collapse: collapse;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       background-color: white;
+      
     }
 
     th, td {
-      padding: 12px 15px;
+      padding: 18px 15px;
       border: 1px solid #ddd;
       text-align: left;
     }
@@ -42,6 +43,8 @@
     tr:hover {
       background-color: #e6f7ff;
     }
+   
+   
    
    
   </style>
@@ -64,6 +67,9 @@
 			<td>Present</td>
 	</tr>
 
+	
+	
+
 
 </table>
 
@@ -76,7 +82,7 @@
 
 
 
-<div><jsp:include page="footer.jsp"/></div>
+<jsp:include page="footer.jsp"/>
 
 
 </body>

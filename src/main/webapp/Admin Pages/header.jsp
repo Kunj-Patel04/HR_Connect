@@ -48,6 +48,18 @@
 	  border-radius:15px;	        	
     }
     
+    @font-face {
+  font-family: 'Foldit';
+  src: url('../Fonts/Foldit-Regular.ttf') format('truetype');
+  /* font-weight: bold; */
+  
+  
+}
+#title{
+font-family: 'Foldit', sans-serif;
+  font-size: 30px;  
+}
+    
   </style>
 </head>
 
@@ -56,8 +68,7 @@
  <link rel="stylesheet" type="text/css" href="custom.css">
 <header>
 
-<div id="title">
-     <h1 style="color:#33FF99">HR Connect </h1>
+<div id="title">	 <h1  style="color:#33FF99">HR Connect </h1>	</div>
      <center><h2 style="
 			  font-family: Arial, Helvetica, sans-serif;
 			  color:#33FF99;
@@ -90,7 +101,7 @@
     
    
     
- </nav>
+ 
     
     <%String nm = (String) session.getAttribute("admin_name");%>
     
@@ -110,7 +121,7 @@
    			 }
     %>
    
-   
+   </nav>
    
 	
 </header>

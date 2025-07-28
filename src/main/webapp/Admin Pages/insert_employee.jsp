@@ -7,30 +7,33 @@
 
 <style>
 
-* {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
-body{
-	  /* display: flex; */
-      justify-content: center; 
-      align-items: center;             
-      
+
+body {
+  
 }
 
+
+
 .insert_emp{
-	padding:3rem;
+	
 	border-radius:20px;	
-	width:100%;
-	max-width: 450px;
+	margin-top:25px;
+	width:400px;	
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
 	text-align:center;
 	background-color:white;
+	font-weight:bold;
+	padding:35px;
+    
+}
+
+.heading{
+	color:#001F3F;
+	background:#99FF66;
+	padding:0.5px;
+	border-radius:75px;
 	
-	 
 }
 
 .insert_emp input{
@@ -62,20 +65,20 @@ input:focus{
 	outline: none;
 }
 
-
-.insert_emp h2{
-	/* margin-bottom:15px; */
-}
-.msg {
-  
-  animation: hideMsg 3s forwards;
+.cntr{
+	
+	justify-content: center;
+    align-items: center;
+     display: flex;
 }
 
-@keyframes hideMsg {
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; display: none; }
-}
+
+
+
+
+ 
+
+
 
 </style>
 
@@ -105,27 +108,33 @@ if (rowObj != null) {
 %>
 <script>
   alert("Data inserted successfully!");
+		  
 </script>
 <%} }%>
 
 
-<div class="insert_emp">
+<div class="shrikhand-regular">
+<div class="cntr">
+	<div class="insert_emp">
 
-<h2>Add Employee Details</h2>
+<div class="heading">	<h2>Add Employee Details</h2>	</div>
 
 	<form action="<%= request.getContextPath()%>/add_emp" method="post">
-	 Name :	 <input type="text" name="new_emp_name" required>	<br>
-	 Password :	 <input type="password" name="new_emp_pass" required>	<br>
-	 Department: <input type="text" name="new_emp_deprt" required>	<br>
+	 First Name :	 		 <input type="text" name="emp_first_name" required>		<br>
+	 Last Name(Surname) :	 <input type="text" name="emp_last_name" required>		<br>
+	 Email :	         	 <input type="email" name="emp_email" required>		<br>
+	 Department: 			 <input type="text" name="emp_deprt" required>		<br>
+	 Password :	   			 <input type="password" name="emp_pass" required>	<br>
 	 
 	 
 	 
-	 <button type= "submit" value="Submit">Button</button>
+	 <button type= "submit" value="Submit">Submit</button>
 	 
 	</form>
+	</div>
+
 </div>
-
-
+</div>
 <%} %>
 
 <jsp:include page="footer.jsp" />

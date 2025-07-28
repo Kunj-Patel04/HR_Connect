@@ -69,6 +69,10 @@
       </div>
     </div>
 
+</div>
+
+<div class="container">
+
     <!-- HR Details Box -->
     <div class="info-box">
       <div class="info-title"> HR Contact</div>
@@ -80,6 +84,10 @@
         <strong>Support:</strong> Contact HR for leave queries, policies, or personal updates.
       </div>
     </div>
+
+   
+    
+
 
   </div>
 

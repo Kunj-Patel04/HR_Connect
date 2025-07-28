@@ -10,12 +10,7 @@
 </head>	
 <body>
 
-<% 
-    /* String user = (String)  */
-%>
-
-
- --%>
+ 
 
 
 

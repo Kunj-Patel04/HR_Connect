@@ -86,14 +86,14 @@
     		<h2>Login</h2>
     
 				    <form action="<%= request.getContextPath() %>/Client" method="post">
-							Name:		<input type="text" name="emp_nm" />	<br>
+							Email:		<input type="email" name="emp_email" />	<br>
 							Password:	<input type="password" name="pass" /> <br>
 										<button type="submit">Login</button>
 										
 				    </form>
 				      
      <div class="footer">
-      Don't have an account? <a href="sign_up.jsp">Register</a>
+      Don't have an account? <a href="<%= request.getContextPath() %>/Client_Pages/sign_up_client.jsp">Register</a>
     </div>
   </div> 
   
