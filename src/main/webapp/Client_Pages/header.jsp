@@ -3,6 +3,20 @@
 
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/Client_Pages/style.css">
 
+<style>
+  @font-face {
+  font-family: 'Permanent_Marker';
+  src: url('../Fonts/Permanent_Marker-Regular.ttf') format('truetype');
+     
+}
+
+
+#title{
+ font-family: 'Permanent Marker', cursive;
+  font-size: 65px;
+    
+}	
+</style>
 
 </head>
 <body>
@@ -11,7 +25,7 @@
 
 <header>
 
-<h1>HR Connect</h1>
+<div id="title" style="color:#d1f2f3">	 HR Connect 	</div>
 
 <nav>
 		<a href="<%= request.getContextPath() %>/Client_Pages/index.jsp">Home</a>

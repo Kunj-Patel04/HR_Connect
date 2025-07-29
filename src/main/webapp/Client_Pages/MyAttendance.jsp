@@ -44,8 +44,21 @@
       background-color: #e6f7ff;
     }
    
+   button{
+   color:Green;
+   background:yellow;
+   width:90px;
+   height:55px;
+   border-radius:15px;
+   border:0px;
+   font-weight:825;
+   }
    
-   
+   button:hover{
+   color:yellow;
+   background:Green;
+   }
+  
    
   </style>
 
@@ -60,11 +73,17 @@
 
 	<tr>
 			<th>Date</th>
-			<th>Status</th>
+			<th>Check IN</th>
+			<th>Check Out</th>
 	</tr>
 	<tr>
 			<td>20/07/2025</td>
-			<td>Present</td>
+			<td>
+				<form>	<button>Check In</button>	</form>
+			</td>
+			<td>
+				<form>	<button>Check Out</button>	</form>
+			</td>
 	</tr>
 
 	

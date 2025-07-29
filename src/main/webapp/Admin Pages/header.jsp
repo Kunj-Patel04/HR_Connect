@@ -49,18 +49,19 @@
     }
     
     @font-face {
-  font-family: 'Foldit';
-  src: url('../Fonts/Foldit-Regular.ttf') format('truetype');
-  /* font-weight: bold; */
-  
-  
+  font-family: 'Permanent_Marker';
+  src: url('../Fonts/Permanent_Marker-Regular.ttf') format('truetype');
+     
 }
+
+
 #title{
-font-family: 'Foldit', sans-serif;
-  font-size: 30px;  
+ font-family: 'Permanent Marker', cursive;
+  font-size: 65px;
+  /* margin-top:15px; */  
 }
     
-  </style>
+   </style>
 </head>
 
 
@@ -68,7 +69,7 @@ font-family: 'Foldit', sans-serif;
  <link rel="stylesheet" type="text/css" href="custom.css">
 <header>
 
-<div id="title">	 <h1  style="color:#33FF99">HR Connect </h1>	</div>
+<div id="title" style="color:lightgreen">	 HR Connect 	</div>
      <center><h2 style="
 			  font-family: Arial, Helvetica, sans-serif;
 			  color:#33FF99;
