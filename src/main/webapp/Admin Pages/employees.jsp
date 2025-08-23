@@ -88,23 +88,24 @@ try {
 			/* String name=""; */
 			
 			while(rs.next()) {
-				String emp_name = rs.getString("employee_name");	/* Get all employees name */
+				String emp_first_name = rs.getString("employee_first_name");	/* Get all employees name */
+				String emp_last_name = rs.getString("employee_last_name");	/* Get all employees name */
 				String emp_depart = rs.getString("department");		/* get all details  */ 
 				int emp_id = rs.getInt("id");								/* of employess */
-				
+				System.out.println("employee List Shows");
 				%>	
 		
 			    <tr>   
-			   <td><%= emp_name %></td>
+			   <td><%= emp_first_name %> <%= emp_last_name %></td>
 			   <td><%= emp_depart %></td>      
-			   <td>
 			   
+			   <td>
 			   <form action="<%= request.getContextPath() %>/delete_emp" method="post">
 			   	 <input type="hidden" name="emp_id" value="<%= emp_id%>">
 			     <input type ="submit" value="Delete Employee" >				<%-- <button id=<%= emp_id %>>delete</button> --%>
 			   </form>
-			   
 			   </td>	<!-- add form tag for delete -->
+			   
 			    </tr>	
 				
 <% 			}			

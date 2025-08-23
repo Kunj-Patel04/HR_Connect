@@ -30,23 +30,24 @@
 <nav>
 		<a href="<%= request.getContextPath() %>/Client_Pages/index.jsp">Home</a>
 		<a href="<%= request.getContextPath() %>/Client_Pages/MyAttendance.jsp">My Attendance</a>
-		<a href="<%= request.getContextPath() %>/Client_Pages/ContactUs.jsp">Contact us</a>
+		<a href="<%= request.getContextPath() %>/Client_Pages/ContactUs.jsp">Contact</a>
+		<a href="<%= request.getContextPath() %>/Client_Pages/profile_client.jsp">Profile</a>
 		
 		
 		
 		
 		
 		
-		<% String nm = (String)session.getAttribute("emp_nm"); %>
+		<% String nm = (String)session.getAttribute("emp_first_name"); %>
 		<%
 		if(nm==null){
 		%>		
 		<a id="login" href="log_in_client.jsp">Login</a>
-		<a id="login" href="sign_up_client.jsp">Sign Up</a>
+		
 		<%} 
 		else{		
 		%>
-		<a id="logout" href="">Logout</a>
+		<a id="logout" href="<%= request.getContextPath() %>/Client_Pages/log_out.jsp">Logout</a>
 		<%} %>
 </nav>
 

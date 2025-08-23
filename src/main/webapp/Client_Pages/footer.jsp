@@ -9,7 +9,7 @@
 
 <footer>
 
-<h2>Developed By KUNJ &copy</h2>
+<h2>Developed And Design By Kunj Fadadu &copy</h2>
 
 </footer>
 

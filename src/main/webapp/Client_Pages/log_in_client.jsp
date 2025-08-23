@@ -93,7 +93,7 @@
 				    </form>
 				      
      <div class="footer">
-      Don't have an account? <a href="<%= request.getContextPath() %>/Client_Pages/sign_up_client.jsp">Register</a>
+      <%-- Don't have an account? <a href="<%= request.getContextPath() %>/Client_Pages/sign_up_client.jsp">Register</a> --%>
     </div>
   </div> 
   

@@ -44,23 +44,20 @@ try {
 	
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hr","root","");
-	String query = "select MAX(id) AS last_join from employees where user_id = ?";
+	String query = "select employee_first_name AS last_join from employees where user_id =? order by id DESC limit 1";
 	PreparedStatement ps = con.prepareStatement(query);
 	
 	 ps.setInt(1, admin_id); 
 	ResultSet rs = ps.executeQuery();
 	
 	if(rs.next()){
-		int last_join = rs.getInt("last_join");
-		/* String emp_name = rs.getString("employee_name"); */
+		String employee_first_name = rs.getString("employee_first_name");
 		
 		
 %>
 		
-		
-		
 		<div id="card3">
-			<h1>Last Join, <%= last_join %></h1>	<!-- SELECT MAX(id) AS highest_id FROM your_table_name WHERE condition; -->			
+			<h1>Last Join, <%= last_join %></h1>				
 		</div>
 		
 		

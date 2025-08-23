@@ -1,3 +1,13 @@
+
+<%@ page import="java.util.*" %>
+<%@ page import="java.sql.*" %>
+
+<%@ page import="in.sp.client.*" %>
+
+
+
+
+<%@page import="java.sql.PreparedStatement"%>
 <html>
 <head>
 
@@ -6,14 +16,14 @@
 <style>
    
     body {
-      font-family: Arial, sans-serif;
+      
       background-color: #f4f6f9;
       /* padding: 0px; */
     }
 
     h2 {
       text-align: center;
-      color: #333;
+      /* color: #333; */
     }
 
     table {
@@ -65,25 +75,64 @@
 </head>
 <body>
 
+<%
+session = request.getSession(false);
+if (session == null || session.getAttribute("emp_id") == null) {
+	  response.sendRedirect("log_in_client.jsp");
+}
+else{
+%>
+
+
 <div><jsp:include page="header.jsp"/></div>
-
-
 
 <table border="1">
 
 	<tr>
 			<th>Date</th>
-			<th>Check IN</th>
-			<th>Check Out</th>
+			<th colspan=2>Attendence</th>
 	</tr>
 	<tr>
-			<td>20/07/2025</td>
+			<td><%= session.getAttribute("date") %></td>
+			
+			<%
+			int emp_id = (int) session.getAttribute("emp_id");
+			
+			
+try{
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				Connection con = DB_Util_Client.getConnection();
+				
+				String query = "select check_in from emp_attendence where emp_id=? and ";
+				PreparedStatement ps = con.prepareStatement(query);
+				ps.setInt(1,emp_id);
+				
+				ResultSet rs = ps.executeQuery();
+				
+
+}
+
+catch(SQLException e)
+{
+e.printStackTrace();
+}
+%>
+
+
+		
+
 			<td>
-				<form>	<button>Check In</button>	</form>
+				<form action="<%= request.getContextPath() %>/checkin" method="post">  <button>Check In</button>	</form>
 			</td>
+			
+			
+			
 			<td>
-				<form>	<button>Check Out</button>	</form>
+					
+				<form action="<%= request.getContextPath() %>/checkout" method="post">	<button>Check Out</button>	</form>
 			</td>
+			
+		
 	</tr>
 
 	
@@ -106,3 +155,28 @@
 
 </body>
 </html>
+
+<%
+Object obj = request.getAttribute("checkin_success");
+
+
+if(obj != null)
+{	int checkin = Integer.parseInt(obj.toString());
+
+	if(checkin > 0)
+	{
+%>		
+	<script>
+		alert("Checkin Successfully...");
+	</script>
+<%		
+	}
+
+}
+
+%>
+
+
+
+
+<%}%>

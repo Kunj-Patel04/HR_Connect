@@ -1,3 +1,7 @@
+<%@ page import="java.sql.*" %>
+<%@ page import="in.sp.client.*" %>
+
+
 <html>
 <head>
 
@@ -51,12 +55,81 @@
 </head>
 <body>
 
+<%
+session = request.getSession(false);
+if (session == null || session.getAttribute("emp_id") == null) {
+	  response.sendRedirect("log_in_client.jsp");
+}
+else{
+%>
+
+
+
+<%
+ session = request.getSession(false);
+ int hr_id = (int) session.getAttribute("hr_id");
+
+try {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	Connection con = DB_Util_Client.getConnection();
+	String query = "select name,phone,contact_email from user_admin where id=?";
+	PreparedStatement ps = con.prepareStatement(query);
+	ps.setInt(1,hr_id);
+	
+	ResultSet rs = ps.executeQuery();
+	if(rs.next()){
+		String nm = rs.getString("name");
+		String phone = rs.getString("phone");
+		String con_email = rs.getString("contact_email");
+		
+		
+		session.setAttribute("nm", nm);
+		session.setAttribute("phone", phone);
+		session.setAttribute("con_email", con_email);
+	}
+	
+
+
+}
+catch(SQLException e )
+{
+e.printStackTrace();
+}
+
+
+%>
+
+
 
 <div><jsp:include page="header.jsp"/></div>
  
 
-  <div class="container">
+ 
 
+
+
+
+
+<div class="container">
+
+    <!-- HR Details Box -->
+    <div class="info-box">
+      <div class="info-title"> HR Contact</div>
+      <div class="info-content">
+        <strong>Name:</strong> <%=session.getAttribute("nm")%> <br>
+        <strong>Email:</strong> <%=session.getAttribute("phone")%><br>
+        <strong>Phone:</strong> <%=session.getAttribute("con_email")%><br>
+        <strong>Office Hours:</strong> Mon-Fri, 10:00 AM - 6:00 PM<br>
+        <strong>Support:</strong> Contact HR for leave queries, policies, or personal updates.
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+ <div class="container">
     <!-- Company Details Box -->
     <div class="info-box">
       <div class="info-title"> Company Details</div>
@@ -68,31 +141,7 @@
         <strong>About:</strong> We specialize in delivering high-quality enterprise software, employee systems, and cloud-based services.
       </div>
     </div>
-
 </div>
-
-<div class="container">
-
-    <!-- HR Details Box -->
-    <div class="info-box">
-      <div class="info-title"> HR Contact</div>
-      <div class="info-content">
-        <strong>Name:</strong> ABC <br>
-        <strong>Email:</strong> @abcsoft.com<br>
-        <strong>Phone:</strong> +91 98765 43210<br>
-        <strong>Office Hours:</strong> Mon-Fri, 10:00 AM - 6:00 PM<br>
-        <strong>Support:</strong> Contact HR for leave queries, policies, or personal updates.
-      </div>
-    </div>
-
-   
-    
-
-
-  </div>
-
-
-
 
 
 
@@ -107,4 +156,4 @@
 </body>
 </html>
 
-
+<%} %>

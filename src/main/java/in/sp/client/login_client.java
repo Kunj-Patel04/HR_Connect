@@ -37,12 +37,16 @@ public class login_client extends HttpServlet{
 			if(rs.next()) {
 				
 				String emp_first_name = rs.getString("employee_first_name");
+				int emp_id = rs.getInt("id");
+				int hr_id = rs.getInt("user_id");
 				
 				
 				
 				HttpSession session = req.getSession();
 			
 				session.setAttribute("emp_first_name", emp_first_name);
+				session.setAttribute("emp_id",emp_id);	//id from employees table
+				session.setAttribute("hr_id",hr_id);
 				
 				session.setAttribute("date",LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
 				

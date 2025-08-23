@@ -99,13 +99,14 @@ footer{
 	width:100%;
 	box-sizing:border-box;
 	border-radius:10px;
-	color:black;
+	color:	#eae3f8;
 	text-align:center;
 	line-height: 15px;
 	margin:0;
 	bottom:0;
 	margin-bottom: 0px;
 	margin-top:65px;
+	font-family: 'Segoe UI', sans-serif;
 	
     
     

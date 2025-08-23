@@ -95,7 +95,7 @@
 			 	 </div>
 		</div>
     
-     <a class="A" href="<%= request.getContextPath() %>/Admin Pages/attendance.jsp">Attendance</a>     
+     <a class="A" href="<%= request.getContextPath() %>/Admin Pages/employee_status.jsp">Employee Status</a>     
    
     
     
