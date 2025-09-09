@@ -29,7 +29,8 @@
 
 <nav>
 		<a href="<%= request.getContextPath() %>/Client_Pages/index.jsp">Home</a>
-		<a href="<%= request.getContextPath() %>/Client_Pages/MyAttendance.jsp">My Attendance</a>
+		<a href="<%= request.getContextPath() %>/Client_Pages/MyAttendance.jsp">Mark Attendance</a>
+		<a href="<%= request.getContextPath() %>/Client_Pages/Timesheet.jsp">Timesheet</a>
 		<a href="<%= request.getContextPath() %>/Client_Pages/ContactUs.jsp">Contact</a>
 		<a href="<%= request.getContextPath() %>/Client_Pages/profile_client.jsp">Profile</a>
 		

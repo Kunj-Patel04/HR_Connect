@@ -36,12 +36,16 @@
 .profile-table {
       width: 100%;
       max-width: 850px;
+      height:300px;
       margin: auto;
       border-collapse: collapse;
       background-color: white;					/* #fff; */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       overflow: hidden;
+      margin-top:65px;
+      font-size:1.2em;
+      font-weight:bold;
     }
 
     .profile-table th, .profile-table td {
@@ -113,7 +117,7 @@ try{
 		<body>
 		<div> <jsp:include page="header.jsp"/> </div>
 
-		<div class="profile_card">
+		<!-- <div class="profile_card"> -->
 
 
 
@@ -167,7 +171,7 @@ try{
 
 
 
-</div>
+<!-- </div> -->
 
 <div><jsp:include page="footer.jsp"/> </div>
 

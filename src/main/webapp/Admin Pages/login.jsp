@@ -78,11 +78,39 @@
       color: #4e54c8;
       text-decoration: none;
     }
+    
+    
+    
+    #login_error{
+    	color:red;
+    	font-size:2em;
+    }
+    
+    
+    
+    
   </style> 
 </head>
 
 <body>
-	  <div class="login-container">
+
+ <div class="login-container">	<!-- login container is start from here -->
+
+
+<%	
+session = request.getSession(false);
+if(session.getAttribute("login_error") != null){
+	int a =(int) session.getAttribute("login_error");
+
+	if(a==1){
+
+%>
+	<div id="login_error">Email or Password is incorrect</div>
+<%
+session.invalidate();
+	} }%>
+
+	 
     		<h2>Login</h2>
     
 				    <form action="<%= request.getContextPath() %>/HR" method="post">
@@ -93,7 +121,7 @@
 				    </form>
 				      
      <div class="footer">
-      Don't have an account? <a href="sign_up.jsp">Register</a>
+      
     </div>
   </div> 
   

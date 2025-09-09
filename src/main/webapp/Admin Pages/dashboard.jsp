@@ -51,13 +51,13 @@ try {
 	ResultSet rs = ps.executeQuery();
 	
 	if(rs.next()){
-		String employee_first_name = rs.getString("employee_first_name");
+		String employee_first_name = rs.getString("last_join");
 		
 		
 %>
 		
 		<div id="card3">
-			<h1>Last Join, <%= last_join %></h1>				
+			 <h1>Last Joined Employee: <u> <%= employee_first_name %> </u></h1> 
 		</div>
 		
 		

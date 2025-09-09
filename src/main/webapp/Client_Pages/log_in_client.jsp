@@ -78,11 +78,32 @@
       color: #4e54c8;
       text-decoration: none;
     }
+    
+    
+    .login_err{
+    	color:red;
+    	font-size:1.5em;
+    }
   </style> 
 </head>
 
 <body>
 	  <div class="login-container">
+	  <%
+	  session = request.getSession(false);
+	  if(session.getAttribute("client_login_error") != null){
+		  int login_err = (int)session.getAttribute("client_login_error");
+		  if(login_err == 1)
+		  {%>
+			  
+			  <div class="login_err">Email or Password is incorrect</div>
+			  
+		  <%}
+	  }
+	  
+	  %>
+	  
+	  
     		<h2>Login</h2>
     
 				    <form action="<%= request.getContextPath() %>/Client" method="post">

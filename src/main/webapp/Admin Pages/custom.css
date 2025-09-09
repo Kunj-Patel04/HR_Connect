@@ -177,15 +177,18 @@ body {
 }
 
 #card1 {
-	background: linear-gradient(135deg, #003366, #0052cc);
+	background: linear-gradient(135deg, #667eea, #764ba2);
+
+
 }
 
 #card2 {
-	background: linear-gradient(135deg, #004d4d, #00cccc);
+	background: linear-gradient(135deg, #6a11cb, #2575fc);
+
 }
 
 #card3 {
-	background: linear-gradient(135deg, #333333, #666666);
+background: linear-gradient(135deg, #ff9966, #ff5e62);
 }
 
 								/* /////////////////// 	Dashboard		//////////////////////// */

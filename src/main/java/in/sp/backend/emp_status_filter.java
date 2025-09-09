@@ -2,7 +2,6 @@ package in.sp.backend;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,7 +28,7 @@ public class emp_status_filter extends HttpServlet {
 		System.out.println("Attendence ====== >" + st);
 
 		List<String> empNames = new ArrayList<>();
-		
+
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hr", "root", "");
@@ -50,13 +49,11 @@ public class emp_status_filter extends HttpServlet {
 
 				System.out.println("Name =========>>>>>> " + emp_first_name);
 
-				}
-				req.setAttribute("empNames", empNames);
-				  RequestDispatcher rd = req.getRequestDispatcher("/Admin Pages/employee_status.jsp");
-				  rd.forward(req,resp);
-				 
+			}
+			req.setAttribute("empNames", empNames);
+			RequestDispatcher rd = req.getRequestDispatcher("/Admin Pages/employee_status.jsp");
+			rd.forward(req, resp);
 
-			
 		}
 
 		catch (SQLException | ClassNotFoundException e) {
