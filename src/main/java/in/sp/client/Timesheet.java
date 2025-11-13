@@ -67,18 +67,11 @@ public class Timesheet extends HttpServlet {
 					System.out.println();
 					
 					checkin_date_list.add(new String[] {checkin_date,checkin_time,checkout_date,checkout_time});
-					/*checkin_times_list.add(checkin_time);
-					checkout_dates_list.add(checkout_date);
-					checkout_times_list.add(checkout_time);*/
 					
 				}
 				System.out.println();
 				req.setAttribute("checkin_date_list",checkin_date_list);
-				/*
-				 * req.setAttribute("checkin_times_list",checkin_times_list);
-				 * req.setAttribute("checkout_dates_list",checkout_dates_list);
-				 * req.setAttribute("checkout_times_list",checkout_times_list);
-				 */
+				
 				
 				
 				

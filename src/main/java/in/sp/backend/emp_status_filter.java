@@ -32,15 +32,13 @@ public class emp_status_filter extends HttpServlet {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hr", "root", "");
-			String query = "SELECT e.employee_first_name, ea.status FROM emp_attendence ea JOIN employees e ON ea.emp_id = e.id WHERE ea.status = ? ";
+			String query = "SELECT DISTINCT e.employee_first_name, ea.status FROM emp_attendence ea JOIN employees e ON ea.emp_id = e.id WHERE ea.check_out_date=? and ea.status = ? ";
 			PreparedStatement ps = con.prepareStatement(query);
-			ps.setString(1, st);
+			ps.setString(1,dt);
+			ps.setString(2, st);
 
 			ResultSet rs = ps.executeQuery();
-			/*
-			 * System.out.println("RS =================>>>>>>>>>>>>>>>>>>>>>"+rs.getString(
-			 * "employee_first_name"));
-			 */
+			
 
 			while (rs.next()) {
 				System.out.println("Employee status");

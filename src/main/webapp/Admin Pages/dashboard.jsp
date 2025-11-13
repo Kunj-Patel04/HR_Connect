@@ -17,8 +17,22 @@
 
 <div class="cards">
 		<div id="card1">		
-		  	<h1>Welcome,									<br/>		  	
-		  	<%=session.getAttribute("admin_name") %>
+		  	<h1>Welcome,									<br/>
+		  	
+		  	<% if(session.getAttribute("admin_name") == null) 
+{
+		String a = "";
+		%>	<%=a %>	<%
+}
+else
+{
+	 String a = (String)session.getAttribute("admin_name");	
+	 %>		<%=a %>	<%
+}
+%>
+		  	
+		  	
+		  	
 		  	
 		  	</h1>		
 		</div>		

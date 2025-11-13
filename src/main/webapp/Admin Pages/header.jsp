@@ -90,7 +90,7 @@
 	    		 <div class="dropdown-btn">  Employees &#9662;</div>	
 		    		 <div class="dropdown-content">
 		    		 	<a class="dropdown-menu" href="<%= request.getContextPath() %>/Admin Pages/insert_employee.jsp">Add Employee</a>
-						<a class="dropdown-menu" href="#">End Employment</a>
+						
 						<a class="dropdown-menu" href="<%= request.getContextPath() %>/Admin Pages/employees.jsp">View All Employees</a>	    		 			    
 			 	 </div>
 		</div>

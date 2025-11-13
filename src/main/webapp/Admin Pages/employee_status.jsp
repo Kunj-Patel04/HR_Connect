@@ -46,6 +46,22 @@ form{
 </style>
 
 </head>
+
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+
+<%
+	session = request.getSession(false);
+	if(session == null || session.getAttribute("admin_id") == null)
+	{
+		response.sendRedirect("login.jsp");
+	}
+	else{
+%>
+
+
+
+
 <body>
  <div class="header"><jsp:include page="header.jsp" /></div>
 
@@ -99,4 +115,5 @@ form{
 
 <div class="footer"><jsp:include page="footer.jsp" /></div>
 </body>
+<%} %>
 </html>

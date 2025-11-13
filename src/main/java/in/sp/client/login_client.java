@@ -39,6 +39,7 @@ public class login_client extends HttpServlet {
 				String emp_first_name = rs.getString("employee_first_name");
 				int emp_id = rs.getInt("id");
 				int hr_id = rs.getInt("user_id");
+			
 
 				HttpSession session = req.getSession();
 
